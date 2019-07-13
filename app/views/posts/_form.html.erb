@@ -42,7 +42,8 @@
       var posting = $.post('/posts', values);
 
       posting.done(function(data) {
-        // TODO: handle response
+        $("#postTitle").text(data["title"]);
+        $("#postBody").text(data["description"]);
       });
     });
   });
